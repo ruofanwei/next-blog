@@ -29,3 +29,23 @@ img {
   max-width: 100%;
   display: block;
 }
+
+/* Code blocks */
+pre[class*="javascript"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+}
+span.foo {
+	background-color: navy;
+	color: #BFD;
+}
+
+span.bar {
+	background:
+rgba(105, 0, 12, .38);
+	color:
+hsl(30, 100%, 50%);
+	border-color:
+transparent;
+}

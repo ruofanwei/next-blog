@@ -1,8 +1,10 @@
+import React, { useEffect } from 'react';
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from './layout.module.css'
 import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
+import Prism from "Prismjs";
 
 const name = 'Ruofan wei'
 export const siteTitle = 'blog'
@@ -14,10 +16,14 @@ export default function Layout({
   children: React.ReactNode
   home?: boolean
 }) {
+  useEffect(() => {
+      Prism.highlightAll();
+    }, []);
   return (
     <div className={styles.container}>
       <Head>
         <link rel="icon" href="/favicon.ico" />
+        <link href="themes/prism-nignt-owl.css" rel="stylesheet" />
         <meta
           name="description"
           content="Learn how to build a personal website using Next.js"
@@ -74,6 +80,7 @@ export default function Layout({
           </Link>
         </div>
       )}
+     <script src="/js/Prism.js"></script>
     </div>
   )
 }
