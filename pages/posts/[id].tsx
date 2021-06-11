@@ -4,7 +4,7 @@ import Head from 'next/head'
 import Date from '../../components/date'
 import utilStyles from '../../styles/utils.module.css'
 import { GetStaticProps, GetStaticPaths } from 'next'
-
+import {  LikeButton, ClapButton } from '@lyket/react';
 export default function Post({
   postData
 }: {
@@ -26,7 +26,11 @@ export default function Post({
         </div>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </article>
-
+      <LikeButton
+        namespace="my-blog-post"
+        id="how-to-beat-me-at-chess"
+        component={LikeButton.templates.Twitter}
+      />
     </Layout>
   )
 }
