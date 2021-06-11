@@ -4,7 +4,7 @@ import Image from 'next/image'
 import styles from './layout.module.css'
 import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
-import Prism from "Prismjs";
+const prism = require('prismjs');
 
 const name = 'Ruofan wei'
 export const siteTitle = 'blog'

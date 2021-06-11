@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@types/prismjs": "^1.16.5",
     "date-fns": "^2.22.1",
     "gray-matter": "^4.0.3",
     "next": "^10.0.0",
