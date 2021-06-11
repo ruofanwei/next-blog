@@ -16,12 +16,13 @@ body {
 }
 
 a {
-  color: #0070f3;
+  color: #47597e;
   text-decoration: none;
 }
 
 a:hover {
   text-decoration: underline;
+  color: #293b5f;
 }
 
 img {
