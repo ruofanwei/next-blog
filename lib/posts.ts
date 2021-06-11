@@ -3,6 +3,10 @@ import path from 'path'
 import matter from 'gray-matter'
 import remark from 'remark'
 import html from 'remark-html'
+import prism from 'remark-prism';
+import codeScreenshot from 'remark-code-screenshot'
+const emoji = require('remark-emoji');
+const codeblocks = require('remark-code-blocks')
 /**
  * join 是單純把指定的路徑連結在一起
  * process.cwd()：獲得當前執行 node 指令時候的檔案夾目錄名
@@ -62,6 +66,10 @@ export async function getPostData(id: string) {
   // Use remark to convert markdown into HTML string
   const processedContent = await remark()
     .use(html)
+    .use(prism)
+    .use(emoji)
+    .use(codeblocks)
+    .use(codeScreenshot)
     .process(matterResult.content)
   const contentHtml = processedContent.toString()
 
