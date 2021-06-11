@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@lyket/react": "^1.4.7",
     "@types/prismjs": "^1.16.5",
     "date-fns": "^2.22.1",
     "gray-matter": "^4.0.3",
